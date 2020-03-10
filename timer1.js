@@ -1,15 +1,20 @@
 let beep = process.stdout.write("\x07");
 let myArgs = process.argv.slice(2);
-Number(myArgs);
 
 // console.log(myArgs);
 
 const timer = function(myArgs) {
   for (let el of myArgs) {
-    setTimeout(() => {
-      console.log("beep");
-      beep;
-    }, Number(el) * 1000);
+    if (el === "true" || el === "false") {
+      return;
+    } else if (el > 0) {
+      setTimeout(() => {
+        console.log("beep");
+        beep;
+      }, Number(el) * 1000);
+    } else {
+      return;
+    }
   }
 };
 
