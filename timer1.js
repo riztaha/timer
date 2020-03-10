@@ -18,5 +18,5 @@ const timer = function(myArgs) {
   }
 };
 
-timer([3, 5, 9, 10, 15]);
-// timer(myArgs);
+// timer([3, 5, 9, 10, 15]);
+timer(myArgs);
